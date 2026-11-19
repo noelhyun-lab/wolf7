@@ -20,6 +20,8 @@ html{background:var(--bg)}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:"Exo 2",system-ui,sans-serif;
 padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
 main{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.side{display:flex;flex-direction:column;gap:14px}
+@media (min-width:820px){main{max-width:1000px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:center;min-height:calc(100vh - 48px)}.rsvp{grid-template-columns:1fr}h2{text-align:left;font-size:17px}.note{text-align:left}.btn{min-height:64px;font-size:19px}}
 img{width:100%;height:auto;display:block;border-radius:14px}
 .rsvp{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:12px 14px;border-radius:14px;
@@ -27,25 +29,23 @@ text-decoration:none;font-weight:600;font-size:17px;color:var(--fg);background:v
 .btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .primary{background:var(--gold);border-color:var(--gold);color:#121212}
 h2{margin:4px 0 0;font-family:Orbitron,sans-serif;font-size:15px;letter-spacing:.18em;color:var(--blue);text-align:center}
-.more{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .note{margin:0;text-align:center;color:var(--muted);font-size:15px;line-height:1.5}
 .note a{color:var(--fg)}
-@media (max-width:360px){.rsvp,.more{grid-template-columns:1fr}}
+@media (max-width:360px){.rsvp{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <main>
 <img src="invite.jpg" width="1059" height="1486" alt="Starfleet Academy calls all cadets to duty. Join Chief Engineer Wolfgang on his 7th Birthday Mission. Friday, December 18, after 12pm school dismissal until 3:00 pm, at Pacaso Westbourne, 442 Westbourne St, La Jolla. Lunch, moon rocks, and a real rocket launch. Siblings welcome. Adults may stay or drop off. We can bring your cadet over from school, just ask. Please share any food allergies. RSVP by December 11 to Noel, 310-801-3161, noelhyun@gmail.com.">
+<div class="side">
 <h2>RSVP BY DECEMBER 11</h2>
 <div class="rsvp">
 <a class="btn primary" href="mailto:noelhyun@gmail.com?subject=RSVP%3A%20Wolfgang%27s%207th%20Birthday&body=Child%27s%20name%3A%20%0A%23%20of%20kids%20coming%20%28incl.%20siblings%29%3A%20%0A%23%20of%20adults%20coming%3A%20%0ABest%20phone%20or%20email%3A%20%0AFood%20allergies%20or%20ride%20from%20school%3F%3A%20%0A%0A%28Can%27t%20make%20it%3F%20Just%20reply%20%22No%22.%29%0A">RSVP by email</a>
 <a class="btn primary" href="sms:+13108013161?&body=RSVP%3A%20Wolfgang%27s%207th%20Birthday%0AChild%27s%20name%3A%20%0A%23%20of%20kids%20coming%20%28incl.%20siblings%29%3A%20%0A%23%20of%20adults%20coming%3A%20%0ABest%20phone%20or%20email%3A%20%0AFood%20allergies%20or%20ride%20from%20school%3F%3A%20%0A%0A%28Can%27t%20make%20it%3F%20Just%20reply%20%22No%22.%29%0A">RSVP by text</a>
 </div>
-<div class="more">
-<a class="btn" href="tel:+13108013161">Call Noel</a>
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=442%20Westbourne%20St%2C%20La%20Jolla%2C%20CA%2092037" target="_blank" rel="noopener">Map</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=442%20Westbourne%20St%2C%20La%20Jolla%2C%20CA%2092037" target="_blank" rel="noopener">Map to Pacaso Westbourne</a>
+<p class="note">Noel · 310-801-3161 · <a href="mailto:noelhyun@gmail.com">noelhyun@gmail.com</a><br>Pacaso Westbourne · 442 Westbourne St, La Jolla</p>
 </div>
-<p class="note">Noel · <a href="tel:+13108013161">310-801-3161</a> · <a href="mailto:noelhyun@gmail.com">noelhyun@gmail.com</a><br>Pacaso Westbourne · 442 Westbourne St, La Jolla</p>
 </main>
 </body>
 </html>
